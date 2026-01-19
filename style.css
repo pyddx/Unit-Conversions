@@ -1,0 +1,144 @@
+/* ข้อ 3: Set margin of all elements */
+* {
+    margin: 10px;
+    box-sizing: border-box; /* แนะนำให้ใส่เพื่อไม่ให้ padding ดันขนาดกล่องเพี้ยน */
+}
+
+body {
+    background-color: black;
+    color: white; /* เพิ่มสีตัวอักษรเป็นขาว ไม่งั้นจะมองไม่เห็นบนพื้นดำ */
+    font-family: Arial, sans-serif;
+}
+
+/* ข้อ 4: Home Section */
+#home {
+    margin-top: -1px; /* โจทย์เขียน -1 แต่น่าจะหมายถึงการขยับ */
+    padding-bottom: 2cm;
+    background-color: #8b008b; /* Blue Magenta tone (DarkMagenta) */
+    overflow: hidden; /* Clear float */
+}
+
+/* ข้อ 5: Header */
+header {
+    font-size: 30px;
+    color: #d8bfd8; /* Light Purple (Thistle) */
+    float: left;
+    padding-left: 2cm;
+    font-weight: bold;
+}
+
+/* ข้อ 6: Navigation Bar Container */
+nav {
+    float: right;
+    padding-right: 1cm;
+}
+
+/* ข้อ 7: Navigation Buttons */
+.topmenu {
+    color: lightgray;
+    background-color: #4b0082; /* Dark Purple (Indigo) */
+    margin: 10px;
+    padding: 10px;
+    border-radius: 1mm;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ข้อ 8: Navigation Buttons Hover */
+.topmenu:hover {
+    color: white;
+    font-weight: bold;
+    background-color: purple;
+}
+
+/* ข้อ 9: Conversion Sections Styling */
+/* จัด Layout ภายใน Section */
+.b div {
+    display: flex; /* ใช้ Flex หรือ Grid ตามโจทย์ แต่ Flex จัดการง่ายกว่าสำหรับ Layout นี้ */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Figure styling */
+figure {
+    float: left;
+    width: 200px;
+    text-align: center;
+}
+
+figcaption {
+    color: black; /* โจทย์สั่งสีดำ (แต่อยู่บนพื้นขาวของกล่อง .b เลยมองเห็น) */
+    font-size: 17px;
+    text-align: center;
+}
+
+/* Conversion Buttons inside sections */
+article button {
+    font-size: 20px;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    background-color: lightgreen;
+    padding: 0 15px;
+    cursor: pointer; /* on-hover mouse pointer */
+}
+
+/* ข้อ 10: Calculator Panel (.b class) */
+.b {
+    border-top-style: solid;
+    border-top-width: 20px;
+    border-radius: 10px;
+    background-color: white;
+    width: 600px;
+    /* height: 400px;  เอาออกเพื่อให้ยืดหยุ่นตามเนื้อหา หรือใส่ไว้ถ้าต้องการ fix */
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 50px; /* ข้อ 15 */
+    color: black; /* ตัวหนังสือในกล่องเป็นสีดำ */
+    padding: 20px;
+    display: flex; /* Flexible box display */
+    flex-direction: column;
+}
+
+/* ข้อ 11, 12, 13: Border Colors */
+.temperature { border-top-color: green; }
+.weight { border-top-color: coral; }
+.distance { border-top-color: cyan; }
+
+/* ข้อ 14: Legend */
+legend {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ข้อ 16: Go Home Button */
+.iconbutton {
+    position: fixed;
+    bottom: 40px;
+    left: 10px;
+    z-index: 100;
+}
+
+/* ข้อ 17: Footer */
+footer {
+    background-color: lightpink;
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    clear: both; /* เคลียร์ float */
+}
+
+/* จัดระเบียบ Input Field เล็กน้อยเพื่อให้ดูสวยงามตามภาพ */
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+input {
+    padding: 5px;
+    font-size: 16px;
+    text-align: center;
+}
