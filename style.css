@@ -1,144 +1,205 @@
-/* ข้อ 3: Set margin of all elements */
 * {
-    margin: 10px;
-    box-sizing: border-box; /* แนะนำให้ใส่เพื่อไม่ให้ padding ดันขนาดกล่องเพี้ยน */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
 }
 
 body {
     background-color: black;
-    color: white; /* เพิ่มสีตัวอักษรเป็นขาว ไม่งั้นจะมองไม่เห็นบนพื้นดำ */
+    color: white; 
     font-family: Arial, sans-serif;
+    
 }
 
-/* ข้อ 4: Home Section */
 #home {
-    margin-top: -1px; /* โจทย์เขียน -1 แต่น่าจะหมายถึงการขยับ */
-    padding-bottom: 2cm;
-    background-color: #8b008b; /* Blue Magenta tone (DarkMagenta) */
-    overflow: hidden; /* Clear float */
+    padding: 20px 40px;
+    background-color: #5c3a6e; 
+    overflow: hidden; 
 }
 
-/* ข้อ 5: Header */
 header {
-    font-size: 30px;
-    color: #d8bfd8; /* Light Purple (Thistle) */
+    font-size: 28px;
+    color: #d8bfd8;
     float: left;
-    padding-left: 2cm;
     font-weight: bold;
 }
 
-/* ข้อ 6: Navigation Bar Container */
 nav {
     float: right;
-    padding-right: 1cm;
 }
 
-/* ข้อ 7: Navigation Buttons */
+.topdiv {
+    display: flex;
+    gap: 40px;
+}
+
 .topmenu {
-    color: lightgray;
-    background-color: #4b0082; /* Dark Purple (Indigo) */
-    margin: 10px;
-    padding: 10px;
-    border-radius: 1mm;
-    font-size: 20px;
+    color: #d8bfd8;
+    background-color: transparent;
+    padding: 8px 0;
+    font-size: 18px;
     border: none;
     cursor: pointer;
+    font-weight: normal;
 }
 
-/* ข้อ 8: Navigation Buttons Hover */
 .topmenu:hover {
     color: white;
     font-weight: bold;
-    background-color: purple;
 }
 
-/* ข้อ 9: Conversion Sections Styling */
-/* จัด Layout ภายใน Section */
-.b div {
-    display: flex; /* ใช้ Flex หรือ Grid ตามโจทย์ แต่ Flex จัดการง่ายกว่าสำหรับ Layout นี้ */
+#all-conversion-sections {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 40px 20px;
 }
 
-/* Figure styling */
+.b {
+    border-top-style: solid;
+    border-top-width: 15px;
+    border-radius: 15px;
+    background-color: white;
+    width: 400px;
+    margin: 20px 0;
+    color: black; 
+    padding: 0;
+    display: flex; 
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.temperature { border-top-color: #5cb85c; }
+.weight { border-top-color: #ff8c69; }
+.distance { border-top-color: #39d2d7; }
+
+.b div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 25px 30px;
+    gap: 25px;
+}
+
 figure {
-    float: left;
-    width: 200px;
+    margin: 0;
+    width: 140px;
     text-align: center;
+    flex-shrink: 0;
+}
+
+figure img {
+    width: 140px;
+    height: auto;
 }
 
 figcaption {
-    color: black; /* โจทย์สั่งสีดำ (แต่อยู่บนพื้นขาวของกล่อง .b เลยมองเห็น) */
-    font-size: 17px;
+    color: black; 
+    font-size: 13px;
     text-align: center;
+    margin-top: 8px;
+    line-height: 1.3;
 }
 
-/* Conversion Buttons inside sections */
-article button {
-    font-size: 20px;
-    border: 1px solid transparent;
-    border-radius: 40px;
-    background-color: lightgreen;
-    padding: 0 15px;
-    cursor: pointer; /* on-hover mouse pointer */
-}
-
-/* ข้อ 10: Calculator Panel (.b class) */
-.b {
-    border-top-style: solid;
-    border-top-width: 20px;
-    border-radius: 10px;
-    background-color: white;
-    width: 600px;
-    /* height: 400px;  เอาออกเพื่อให้ยืดหยุ่นตามเนื้อหา หรือใส่ไว้ถ้าต้องการ fix */
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 50px; /* ข้อ 15 */
-    color: black; /* ตัวหนังสือในกล่องเป็นสีดำ */
-    padding: 20px;
-    display: flex; /* Flexible box display */
+article {
+    flex: 1;
+    display: flex;
     flex-direction: column;
 }
 
-/* ข้อ 11, 12, 13: Border Colors */
-.temperature { border-top-color: green; }
-.weight { border-top-color: coral; }
-.distance { border-top-color: cyan; }
-
-/* ข้อ 14: Legend */
-legend {
-    font-size: 30px;
-    font-weight: bold;
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
 }
 
-/* ข้อ 16: Go Home Button */
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+fieldset label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 3px;
+}
+
+input {
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+input:read-only {
+    background-color: #f5f5f5;
+}
+
+article button {
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    background-color: #5cb85c;
+    color: white;
+    padding: 8px 25px;
+    cursor: pointer;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+article button:hover {
+    background-color: #4cae4c;
+}
+
+aside {
+    font-size: 12px;
+    color: #555;
+    line-height: 1.4;
+    margin-top: 3px;
+}
+
 .iconbutton {
     position: fixed;
-    bottom: 40px;
-    left: 10px;
+    bottom: 50vh;
+    left: 15px;
     z-index: 100;
 }
 
-/* ข้อ 17: Footer */
-footer {
-    background-color: lightpink;
-    margin-top: 20px;
-    padding: 10px;
-    text-align: center;
-    color: black;
-    clear: both; /* เคลียร์ float */
+.iconbutton a {
+    text-decoration: none;
 }
 
-/* จัดระเบียบ Input Field เล็กน้อยเพื่อให้ดูสวยงามตามภาพ */
-fieldset {
-    border: none;
+.iconbutton button {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border: 2px solid #666;
+    cursor: pointer;
+    font-size: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
     align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
-input {
-    padding: 5px;
-    font-size: 16px;
+
+.iconbutton button:hover {
+    background-color: #f0f0f0;
+    border-color: #333;
+}
+
+footer {
+    background-color: #d8bfd8;
+    margin-top: 20px;
+    padding: 15px;
     text-align: center;
+    color: #333;
+    clear: both;
+    font-size: 14px;
 }

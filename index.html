@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unit Conversions</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <section id="home">
@@ -20,7 +22,7 @@
     </section>
 
     <div id="all-conversion-sections">
-        
+
         <section id="temperature" class="b temperature">
             <div id="tmp">
                 <figure>
@@ -37,7 +39,8 @@
                         <input type="number" id="fahrenheit" readonly>
                     </fieldset>
                     <aside>
-                         (C × 9/5) + 32
+                        To convert celsius to fahrenheit yourself, use this formula replacing the `C` with your
+                        temperature in celsius: (C × 9/5) + 32
                     </aside>
                 </article>
             </div>
@@ -59,7 +62,8 @@
                         <input type="number" id="pounds" readonly>
                     </fieldset>
                     <aside>
-                        kg x 2.205
+                        To convert kilograms to pounds yourself, use this formula replacing the `kg` with your weight in
+                        kilograms: kg × 2.205
                     </aside>
                 </article>
             </div>
@@ -81,7 +85,8 @@
                         <input type="number" id="miles" readonly>
                     </fieldset>
                     <aside>
-                        km ÷ 1.609
+                        To convert kilometers to miles yourself, use this formula replacing the `km` with your distance
+                        in kilometers: km ÷ 1.609
                     </aside>
                 </article>
             </div>
@@ -91,9 +96,18 @@
 
     <div id="go-home" class="iconbutton">
         <a href="#home">
-            <button style="border-radius: 100%; width: 40px; height: 40px; background-color: cyan; border: none; cursor: pointer;">
-                &#8679; 
+            <button style="
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+">
+                &#8962;
             </button>
+
         </a>
     </div>
 
@@ -101,4 +115,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
